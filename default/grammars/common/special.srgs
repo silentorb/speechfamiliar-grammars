@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar xml:lang="en-us" version="1.0" mode="voice"
+xmlns="http://www.w3.org/2001/06/grammar" tag-format="properties-ms/1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar 
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+
+xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions"
+root="root"
+         >
+  <rule id='root' scope='public'>
+
+    <one-of >
+      <item>
+        <tag>sendkeys="%{TAB}"</tag>last window
+      </item>
+
+    </one-of>
+  </rule>
+
+  <rule id='keys' scope='public'>
+    <one-of>
+      <item >
+        <token sapi:display="{)}">right paren</token>
+      </item>
+      <item >
+        <token sapi:display="{(}">left paren</token>
+      </item>
+      <item >
+        <token sapi:display="{ENTER}">newline</token>
+      </item>
+      <item >
+        <token sapi:display="&lt;">start tag</token>
+      </item>
+      <item >
+        <token sapi:display="&gt;">close tag</token>
+      </item>
+      <item >
+        <token sapi:display=",">comma</token>
+      </item>
+      <item >
+        <token sapi:display=".">period</token>
+      </item>
+      <item >
+        <token sapi:display="?">question mark</token>
+      </item>
+      <item >
+        <token sapi:display="!">exclamation point</token>
+      </item>
+      <item >
+        <token sapi:display="*">asterisk</token>
+      </item>
+      <item >
+        <token sapi:display="&apos;">apostrophe</token>
+      </item>
+      <item >
+        <token sapi:display="&quot;">quote</token>
+      </item>
+      <item >
+        <token sapi:display="-">minus</token>
+      </item>
+      <item >
+        <token sapi:display="{+}">plus</token>
+      </item>
+      <item >
+        <token sapi:display="{{}">left brace</token>
+      </item>
+      <item >
+        <token sapi:display="{}}">right brace</token>
+      </item>
+      <item >
+        <token sapi:display=":">colon</token>
+      </item>
+      <item >
+        <token sapi:display="{`}">tilde</token>
+      </item>
+      <item >
+        <token sapi:display="{TAB}">tab</token>
+      </item>
+      <item >
+        <token sapi:display=";">semi-quote</token>
+      </item>
+    </one-of>
+  </rule>
+</grammar>

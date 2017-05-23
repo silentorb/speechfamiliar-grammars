@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"         
+ priority="0">
+  <onload type="python">
+    <![CDATA[
+Automation.execute('standard.initialize_external_programs', Array[object]([grammar]))
+]]>
+  </onload>
+
+  <rule id='root'>
+
+    <choice >
+      <item repeat='0-10' weight='3'>
+        <choice>
+          <reference uri='windows.sfg'/>
+          <reference uri='text_editing.sfg'/>
+        </choice>
+      </item>
+
+      <item >
+        reload speech familiar
+        <tag>
+          python="<![CDATA[
+Automation.reload()
+]]>"
+        </tag>
+      </item>
+
+      <item >
+        hide speech familiar
+        <tag>
+          python="<![CDATA[
+Automation.hide_speech_familiar()
+]]>"
+        </tag>
+      </item>
+
+      <item >
+        show speech familiar
+        <tag>
+          python="<![CDATA[
+Automation.show_speech_familiar()
+]]>"
+        </tag>
+      </item>
+
+      <item >
+        <tag>
+          python="<![CDATA[
+Automation.sleep()
+]]>"
+        </tag>
+        wake up
+      </item>
+
+
+      <item >
+        add global word
+        <tag>
+          ruby="<![CDATA[
+Automation.add_word_dialog 'vocabulary#words', ''
+]]>"
+        </tag>
+      </item>
+
+      <item >
+        edit global word
+        <item parameter="word">
+          <reference uri="vocabulary.sfg" />
+        </item>
+        <tag>
+          python="<![CDATA[
+Automation.add_word_dialog('vocabulary#words', word.parameter['word'].text)
+]]>"
+        </tag>
+      </item>
+
+      <item>        
+        <tag>ruby="<![CDATA[
+Automation.run_program "e:\\dev\\SpeechFamiliar\\SpeechFamiliar\\update.ps1"
+Automation.close_speech_familiar
+]]>"
+        </tag>update speech familiar
+      </item>
+      
+      <item >
+        format for web
+        <tag>plugin="standard.format_for_web"</tag>
+      </item>
+      <item >
+        <tag>
+          python="<![CDATA[
+Automation.wake_up()
+]]>"
+        </tag>
+        start speech familiar
+      </item>
+      <item >
+        <tag>
+          python="<![CDATA[
+Automation.sleep(1)
+]]>"
+        </tag>
+        go to sleep
+      </item>
+      <item >
+        <tag>
+          python="<![CDATA[
+Automation.sleep()
+]]>"
+        </tag>
+        stop speech familiar
+      </item>
+
+      <item >
+        <tag>
+          python="<![CDATA[
+Automation.close_speech_familiar()
+]]>"
+        </tag>
+        close speech familiar
+      </item>
+
+      <item>
+        <tag>plugin="standard.switch_window</tag>
+        switch to
+        <item parameter="words" repeat='1-6'>
+          <reference uri="vocabulary.sfg" />
+        </item>
+      </item>
+
+      <item >
+        <choice>
+          <item>run</item>
+          <item>start</item>
+          <item>open</item>
+        </choice>
+
+        <reference uri='#programs'/>
+        <tag>plugin="standard.run_program"</tag>
+      </item>
+
+      <item >
+        spell
+        <item parameter="character" repeat='1-20'>
+          <reference uri='spelling.sfg'/>
+        </item>
+        <tag>
+          python="<![CDATA[
+output = ''
+for x in word.parameters['character']:
+  Automation.sendkeys(x.text)
+  output += x.text
+print 'spelled ' + output
+]]>"
+        </tag>
+      </item>
+
+      <item >
+        press
+        <item parameter='keys' repeat='1-10'>
+          <reference uri='keyboard.sfg'/>
+        </item>
+        <tag>
+          python="<![CDATA[
+output = ''
+for x in word.parameters['keys']:
+  output += x.text
+Automation.sendkeys(output)
+print 'pressed ' + output
+]]>"
+        </tag>
+      </item>
+      
+      <item >
+        insert <reference uri='windows_explorer.sfg#pages'/>
+        <tag>plugin="web_browser.insert_folder"</tag>
+        <tag>sendkeys="{ENTER}"</tag>
+      </item>
+
+      <item >
+        simply insert <reference uri='windows_explorer.sfg#pages'/>
+        <tag>plugin="web_browser.insert_folder"</tag>
+      </item>
+
+    </choice>
+  </rule>
+
+  <rule id='programs'>
+    <choice parameter='path'>
+      <item >default</item>
+    </choice>
+  </rule>
+
+  <rule id='range1_10' >
+    <choice >
+      <item >1</item>
+      <item >2</item>
+      <item >3</item>
+      <item >4</item>
+      <item >5</item>
+      <item >6</item>
+      <item >7</item>
+      <item >8</item>
+      <item >9</item>
+      <item >10</item>
+    </choice>
+  </rule>
+
+
+</grammar>

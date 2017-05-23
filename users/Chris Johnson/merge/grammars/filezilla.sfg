@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar 
+         >
+  <rule id='root'>
+    
+    <choice >
+      <item>
+        <tag>sendkeys="^d"</tag>disconnect
+      </item>
+      <item>
+        <tag>sendkeys="^r"</tag>reconnect
+      </item>
+      <item>
+        <tag>sendkeys="{F5}"</tag>refresh
+      </item>
+
+    </choice>
+</rule>
+
+</grammar>

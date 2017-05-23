@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+ priority="3"        >
+
+  <rule id='root'>
+    <choice >
+      <item>
+        <tag>sendkeys="{ESC}"</tag>delete line
+      </item>
+      <item>
+        <tag>sendkeys="{ESC}"</tag>clear line
+      </item>
+      <item>
+        <tag>sendkeys="{ESC}"</tag>clear
+      </item>
+      <item>
+        <tag>sendkeys="^c"</tag>break execution
+      </item>
+      <item>
+        <tag>sendkeys="{UP}"</tag>back
+      </item>
+      <item>
+        <tag>sendkeys="{UP}{ENTER}"</tag>repeat
+      </item>
+      <item>
+        <tag>sendkeys="{DOWN}"</tag>forward
+      </item>
+      <item >
+        go to <reference uri='windows_explorer.sfg#pages'/>
+        <tag>plugin="web_browser.cd_target"</tag>
+      </item>
+      <item >
+        bob
+        <item parameter="amount" repeat='1-6'>
+          <reference uri='numbers.sfg'/>
+        </item>
+        <tag>
+          python="<![CDATA[
+print word.parameter['amount']
+Automation.sendkeys('{BACKSPACE ' + str(word.parameter['amount'].text) + '}')
+]]>"
+        </tag>
+      </item>
+
+      <item display="cd ..{ENTER}">
+        parent folder
+      </item>
+      <item display="cd \{ENTER}">
+        root folder
+      </item>
+    </choice>
+  </rule>
+
+  <rule id='pages'>
+    <choice>
+      <item >default</item>
+    </choice>
+  </rule>
+
+</grammar>

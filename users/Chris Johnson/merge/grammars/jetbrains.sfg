@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar>
+  <rule id='root' scope='public'>
+
+    <choice >
+      <item>
+        <tag>sendkeys="^+C"</tag>comment out
+      </item>
+      <item>
+        <tag>sendkeys="^+C"</tag>uncomment
+      </item>
+      <item>
+        <tag>sendkeys="%+F"</tag>format text
+      </item>
+      <item>
+        <tag>sendkeys="^B"</tag>go to definition
+      </item>
+      <item>
+        <tag>sendkeys="^+1"</tag>select file
+      </item>
+      <item>
+        <tag>sendkeys="{F6}"</tag>run project
+      </item>
+      <item>
+        <tag>sendkeys="{F11}"</tag>build project
+      </item>
+      <item>
+        <tag>sendkeys="^{F5}"</tag>debug project
+      </item>
+    </choice>
+  </rule>
+
+</grammar>

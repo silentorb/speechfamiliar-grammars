@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar>
+  <rule id='root'>
+    <choice >
+      <item repeat="1-16">
+        <reference uri="programming.sfg" />
+        <reference uri="spelling.sfg" />
+        <reference uri="numbers.sfg" />
+        <reference uri="#bashwords" />
+
+        <tag>ruby=text.dictation sentence</tag>
+      </item>
+    </choice>
+  </rule>
+
+  <rule id='bashwords'>
+    <item display="|">pipe</item>
+    <item display="cd ">CD</item>
+    <item display="mkdir ">make directory</item>
+    <item display="ssh">SSH</item>
+    <item display="ssh git@server1.ideasbynature.com">connect to sparky</item>
+    <item display="ssh idretrax@retrax.ideasbynature.org">connect to retrax</item>
+  </rule>
+</grammar>

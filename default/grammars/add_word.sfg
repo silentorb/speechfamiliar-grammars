@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar priority ="2" no_spaces ="true">
+  <rule id='root'>
+    <choice >
+      <item>
+        <item repeat='1-10'>
+          <choice>
+        <reference uri='spelling.sfg'/>
+          </choice>
+        </item>
+      <tag>python="<![CDATA[
+output = ''
+for x in word.words:
+  Automation.sendkeys(x.text)
+  output += x.text
+print 'spelled ' + output
+]]>"
+      </tag>      
+      </item>
+      <item>
+        <tag>sendkeys="{ESC}"</tag>cancel
+      </item>
+      <item>
+        <tag>sendkeys="{ENTER}"</tag>add word
+      </item>
+      <item display='%d^a'>add suffix</item>
+    </choice>
+  </rule>
+
+</grammar>

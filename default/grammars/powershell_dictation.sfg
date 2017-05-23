@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+no_spaces="false" priority="-1">
+  <rule id='root'>
+
+    <choice >
+      <item repeat='1-16'>
+        <choice>
+          <reference uri='vocabulary.sfg'/>
+          <reference uri='numbers.sfg'/>
+          <reference uri="#words" />
+        </choice>
+        <tag type='ruby'>text.dictation sentence</tag>
+      </item>
+    </choice>
+  </rule>
+
+  <rule id='words'>
+    <choice>
+      <item display="md">
+        make directory
+      </item>
+      <word display="cd">CD</word>
+      <word display="cd ..">CD dot dot</word>
+      <word display="cd \">CD backslash</word>
+      <word display="dir{ENTER}">list all</word>
+      <item display="remove-item">remove item</item>
+      <word display="{ENTER}">word</word>
+      <word display="dir">D-eye-R</word>
+      <item display="|">pipe</item>
+      <item>undisplay</item>
+    </choice>
+  </rule>
+</grammar>

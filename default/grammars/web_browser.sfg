@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+>
+  <onload type="python"><![CDATA[
+Automation.execute('web_browser.initialize_web_pages', Array[object](['web_browser', 'web_pages.xml']))
+]]></onload>
+  
+  <rule id='root'>    
+    <choice >
+      <reference uri='windows_explorer.sfg#explorer' />
+      <item >
+        go to <reference uri='#pages'/>
+        <tag>plugin="web_browser.goto_page"</tag>
+      </item>
+      <item >
+        add page
+        <tag>sendkeys="%d"</tag>
+        <tag>plugin="web_browser.add_page"</tag>
+      </item>
+      <item>
+        <tag>sendkeys="{F5}"</tag>refresh
+      </item>
+      <item>
+        <tag>sendkeys="^{F5}"</tag>full refresh
+      </item>
+      <item>
+        <tag>sendkeys="^e"</tag>search bar
+      </item>
+      <item>
+        <tag>sendkeys="^t"</tag>new tab
+      </item>
+      <item>
+        <tag>sendkeys="^u"</tag>view source
+      </item>
+      <item>
+        <tag>sendkeys="{F12}"</tag>fire bug
+      </item>
+      <item>
+        <tag>sendkeys="^+c"</tag>select element
+      </item>
+    </choice>
+  </rule>
+
+  <rule id='pages'>
+    <choice parameter='address'>
+      <item >default</item>
+    </choice>
+  </rule>
+</grammar>

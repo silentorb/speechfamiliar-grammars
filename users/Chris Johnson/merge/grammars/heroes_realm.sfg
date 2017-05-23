@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+no_spaces="false" priority="-1">
+  <rule id='root'>
+    <item>
+      <choice >
+        <item repeat='1-16'>
+          <choice>
+            <reference uri='vocabulary.sfg#words'/>
+            <reference uri='numbers.sfg'/>
+            <reference uri="#words" />
+          </choice>
+        </item>
+        <item display="{UP}{ENTER}">repeat</item>
+      </choice>
+      <tag global="true">python="<![CDATA[
+for word in result.words:
+  word.run_libraries()
+Automation.sendkeys('{ENTER}')
+]]>"
+      </tag>
+    </item>
+  </rule>
+
+  <rule id='words'>
+    <choice>
+      <item>wait</item>
+    </choice>
+  </rule>
+</grammar>

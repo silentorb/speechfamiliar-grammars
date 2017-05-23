@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar priority="1"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+         >
+
+  <item id='root'>
+    <choice >
+
+      <item>
+        <tag>sendkeys="{SPACE}/>"</tag>close element
+      </item>
+
+      <item>
+        <tag>sendkeys="^+s"</tag>save all documents
+      </item>
+      <item>
+        <tag>sendkeys="+{F6}"</tag>build project
+      </item>
+      <item>
+        <tag>sendkeys="{F6}"</tag>build solution
+      </item>
+      <item>
+        <tag>sendkeys="{F5}"</tag>debug project
+      </item>
+      <item>
+        <tag>sendkeys="+{F5}"</tag>stop debugging
+      </item>
+      <item>
+        <tag>sendkeys="{F11}"</tag>step into
+      </item>
+      <item>
+        <tag>sendkeys="{F10}"</tag>step over
+      </item>
+      <item>
+        <tag>sendkeys="+{F11}"</tag>step out of
+      </item>
+
+      <item>
+        <tag>sendkeys="{F9}"</tag>breakpoint
+      </item>
+      <item>
+        <tag>sendkeys="^ec"</tag>comment out
+      </item>
+      <item>
+        <tag>sendkeys="^+f"</tag>find in files
+      </item>
+      <item>
+        <tag>sendkeys="^+a"</tag>add new item
+      </item>
+      <item>
+        <tag>sendkeys="+%a"</tag>add existing item
+      </item>
+      <item>
+        <tag>sendkeys="^eu"</tag>uncomment
+      </item>
+      <item>
+        <tag>sendkeys="^ed"</tag>format text
+      </item>
+      <item>
+        <tag>sendkeys="{TAB}{TAB}"</tag>insert that
+      </item>
+      <item>
+        <tag>sendkeys="{F2}"</tag>rename member
+      </item>
+      <item>
+        <tag>sendkeys="{F2}"</tag>rename item
+      </item>
+      <item>
+        <tag>sendkeys="^h"</tag>find and replace
+      </item>
+      <item>
+        <tag>sendkeys="^h"</tag>replace text
+      </item>
+      <item>
+        <tag>sendkeys="+%{ENTER}"</tag>fullscreen
+      </item>
+      <item>
+        <tag>sendkeys="^ws"</tag>explore solution
+      </item>
+      <item>
+        <tag>sendkeys="^wc"</tag>explore class
+      </item>
+      <item>
+        <tag>sendkeys="+%c"</tag>add new class
+      </item>
+      <item>
+        <tag>sendkeys="%bo{UP}{ENTER}"</tag>debug build
+      </item>
+      <item>
+        <tag>sendkeys="%bor{ENTER}"</tag>release build
+      </item>
+      <item display="using System.">using system</item>
+      <item display="= new ();{ENTER}">create that</item>
+      <item>
+        <tag>sendkeys="using SilentOrb."</tag>using silent orb
+      </item>
+
+      <item >
+        go to brace
+        <tag>vs="Edit.GotoBrace"</tag>
+      </item>
+
+      <item >
+        toggle outline
+        <tag>vs="Edit.ToggleOutliningExpansion"</tag>
+      </item>
+
+      <item >
+       implement interface
+        <tag>vs="Edit.ImplementInterfaceStubsImplicitly"</tag>
+      </item>
+
+      <item >
+        next error
+        <tag>vs="View.NextError"</tag>
+      </item>
+      
+      <item >
+        previous error
+        <tag>vs="View.PreviousError"</tag>
+      </item>
+
+      <item >
+        next result
+        <tag>vs="Edit.GoToFindResults1NextLocation"</tag>
+      </item>
+      <item >
+        previous result
+        <tag>vs="Edit.GoToFindResults1PrevLocation"</tag>
+      </item>
+
+      <item >
+        next reference
+        <tag>vs="View.FindSymbolResults"</tag>
+        <tag>python="Automation.sleep(300)"</tag>
+        <tag>sendkeys="{DOWN 1}{ENTER}"</tag>
+      </item>
+      
+      <item >
+        previous reference
+        <tag>vs="View.FindSymbolResults"</tag>
+        <tag>python="Automation.sleep(300)"</tag>
+        <tag>sendkeys="{UP 1}{ENTER}"</tag>
+      </item>
+
+      <item >
+        next method
+        <tag>vs="Edit.NextMethod"</tag>
+      </item>
+      <item >
+        previous method
+        <tag>vs="Edit.PreviousMethod"</tag>
+      </item>
+
+      <item >
+        next result 2
+        <tag>vs="Edit.GoToFindResults2NextLocation"</tag>
+      </item>
+      <item >
+        previous result 2
+        <tag>vs="Edit.GoToFindResults2PrevLocation"</tag>
+      </item>
+
+      <item >
+        add event handler
+        <tag>vs="Edit.AddEventHandler"</tag>
+      </item>
+      <item >
+        create folder
+        <tag>vs="NewFolder"</tag>
+      </item>
+
+      <item>
+        output all commands
+        <tag>plugin="visual_studio.output_commands"</tag>
+      </item>
+
+      <item >
+        go to definition
+        <tag>vs="Edit.GoToDefinition"</tag>
+      </item>
+
+      <item >
+        add method
+        <tag>vs="EditorContextMenus.CodeWindow.GenerateMethodStub"</tag>
+      </item>
+
+      <item >
+        find all references
+        <tag>vs="Edit.FindAllReferences"</tag>
+      </item>
+
+      <item >
+        insert snippet
+        <tag>vs="Edit.InsertSnippet"</tag>
+        <tag>sendkeys="{DOWN 5}{ENTER}"</tag>
+      </item>
+
+      <item >
+        custom snippet
+        <tag>vs="Edit.InsertSnippet"</tag>
+        <tag>sendkeys="{DOWN 1}{ENTER}"</tag>
+      </item>
+
+      <item >
+        insert keystroke
+        <tag>vs="Edit.InsertSnippet"</tag>
+        <tag>sendkeys="{DOWN}{ENTER}sendkeys{ENTER}"</tag>
+      </item>
+
+      <item >
+        insert action
+        <tag>vs="Edit.InsertSnippet"</tag>
+        <tag>sendkeys="{DOWN}{ENTER}action{ENTER}"</tag>
+      </item>
+
+      <item >
+        initialize constructor
+        <tag>plugin="visual_studio.initialize_constructor"</tag>
+      </item>
+      
+      <item >
+        default constructor
+        <tag>vs="Edit.InsertSnippet"</tag>
+        <tag>sendkeys="{DOWN 3}{ENTER}ctor{ENTER}"</tag>
+      </item>
+      <item>
+        <tag>vs="Window.Windows"</tag>explore windows
+      </item>
+
+      <item >
+        close solution
+        <tag>vs="File.CloseSolution"</tag>
+      </item>
+      <item>
+        <tag>vs="Project.AddReference"</tag>add reference
+      </item>
+      <item>
+        refresh solution
+        <tag>sendkeys="^ws"</tag>
+        <tag>vs="View.Refresh"</tag>
+      </item>
+      <item>
+        <tag>sendkeys="^+o"</tag>open solution
+      </item>
+      <item>
+        <tag>vs="Project.ExcludeFromProject"</tag>exclude from project
+      </item>
+      <item>
+        <tag>vs="File.OpenWebSite"</tag>open website
+      </item>
+      <item>
+        <tag>vs="Project.AddExistingItem"</tag>add existing item
+      </item>
+      <item>
+        <tag>vs="Context.ViewCode"</tag>view code
+      </item>
+      <item>
+        <tag>vs="View.StartPage"</tag>start page
+      </item>
+      <item>
+        <tag>vs="Window.NextPane</tag>next pane
+      </item>
+      <item>
+        <tag>vs="Window.PreviousPane</tag>previous pane
+      </item>
+ 
+    </choice>
+  </item>
+
+</grammar>

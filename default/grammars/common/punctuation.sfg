@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+>
+  <rule id='root'>
+    <choice>
+      
+      <item no_spaces='true'>
+        <choice>
+          <word display="{PGUP}">page-up</word>
+          <word display="{)}" pron="r ay t &amp; p ey r ih n">
+            right-paren
+          </word>
+          <word display="{(}" pron="l eh f t &amp; p ey r ih n">left-paren</word>
+          <word display="{ENTER}">newline</word>
+          <word display="{ENTER}">enter</word>
+          <word display="{PGUP}">page-up</word>
+          <word display="-">hyphen</word>
+          <word display="{TAB}">tab</word>
+          <word display="&amp;&amp;">logical-and</word>
+          <word display=".">dot</word>
+
+          <!--<word >
+          dot
+          <word parameter="character" repeat='0-6'>
+            <choice>
+              <reference uri='letters.sfg'/>
+              <reference uri='numbers.sfg#normal'/>
+            </choice>
+          </word>
+          <tag>
+            python="<![CDATA[
+output = ''
+if word.parameter.contains_key('character'):
+  for x in word.parameter['character']:  
+    output += x.text
+Automation.sendkeys('.' + output)
+print 'spelled ' + output
+]]>"
+          </tag>
+        </word>-->
+          <word display="|">vertical-bar</word>
+          <word display="||">logical-or</word>
+          <word display="#">pound sign</word>
+          <word display="/">forward-slash</word>
+          <word display="\">backslash</word>
+          <word display="@">at sign</word>
+          <word display="$">$</word>
+          <word display="{%}">percent</word>
+          <word display=":">colon</word>
+          <word display=";">semicolon</word>
+          <word display="{`}">tilde</word>
+          <word display="_">underscore</word>
+          <word display="{BACKSPACE}">backspace</word>
+          <word display="{DELETE}">
+            delete-that
+          </word>
+          <word display="{SPACEBAR}">spacebar</word>
+          <word display="{PGDN}">page-down</word>
+          <word display="{{}" >
+            left-brace
+          </word>
+          <word display="{}}">
+            right-brace
+          </word>
+          <word display="[">
+            left-bracket
+          </word>
+          <word display="]">right-bracket</word>
+          <word display="?">?</word>
+          <word display="*">asterisk</word>
+          <word>!</word>
+          <word display="&amp;" >ampersand</word>
+          <word display="&apos;">apostrophe</word>
+          <word display="&quot;">quote</word>
+          <word display="&lt;">
+            start-tag
+          </word>
+          <word display="&gt;" >
+            close-tag
+          </word>
+          <word display="" capitalize_modifier="true" modifier="true">Cap</word>
+          <word display="" capitalize_all_modifier="true" modifier="true">All Cap</word>
+          <word display="" capitalize_all_modifier="true" modifier="true">All Cap</word>
+          <word display="" no_capitalize_modifier="true" modifier="true">No Cap</word>
+          <word display="" no_spaces_modifier="true" modifier="true">no space</word>
+          <word display="{TAB}">tab</word>
+        </choice>
+
+      </item>
+      
+      <item>
+        <choice>
+          <word display="=">equals</word>
+          <word display="-">subtract</word>
+          <word display="{+}">plus</word>
+          <word display="," one_following_space="true">comma</word>
+        </choice>
+      </item>
+      
+    </choice>
+  </rule>
+</grammar>

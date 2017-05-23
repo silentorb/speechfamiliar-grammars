@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<list>
+
+  <application path="C:\Program Files\Common Files\microsoft shared\Help 9\dexplore.exe">
+    <arguments> /helpcol ms-help://ms.vscc.v90 /LaunchNamedUrlTopic DefaultPage /usehelpsettings VisualStudio.9.0</arguments>
+    <command>visual studio documentation</command>
+  </application>
+  
+  <application path ="C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe">
+    <command>visual studio</command>
+  </application>
+
+  <application path ="C:\Program Files\Internet Explorer\iexplore.exe">
+    <command>internet explorer</command>
+  </application>
+
+  <application path ="%SystemRoot%\notepad.exe">
+    <command>notepad</command>
+  </application>
+
+  <application path ="C:\Program Files\FileZilla FTP Client\filezilla.exe">
+    <command>filezilla</command>
+  </application>
+  
+  <application path ="C:\Users\Chris Johnson\AppData\Local\Google\Chrome\Application\chrome.exe">
+    <command>chrome</command>
+  </application>
+  
+  <application path ="C:\Program Files\Mozilla Thunderbird\thunderbird.exe">
+    <command>thunderbird</command>
+  </application>
+
+  <application path="C:\Program Files\Mozilla Firefox\firefox.exe">
+    <command>firefox</command>
+  </application>
+
+  <application path ="%SystemRoot%\cmd.exe">
+    <command>command prompt</command>
+  </application>
+
+  <application path ="C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Accessories\Windows PowerShell\Windows PowerShell.lnk">
+    <command>powershell</command>
+  </application>
+
+  <application path="C:\Program Files\Windows Media Components\Encoder\wmenc.exe">
+    <command>media encoder</command>
+  </application>
+
+  <application path="C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe">
+    <command>ruby ide</command>
+  </application>
+
+  <application path='services.msc'>
+    <command>services</command>
+  </application>
+
+  <application path="C:\Program Files\Cakewalk\SONAR 6 Producer Edition\SONARPDR.exe">
+    <command>sonar</command>
+  </application>
+
+  <application path='C:\Softimage\XSI_6.02\Application\bin\XSI.bat'>
+    <command>softimage</command>
+    <arguments>-essential</arguments>
+  </application>
+
+  <application path='C:\Python25\Lib\site-packages\pythonwin\Pythonwin.exe'>
+    <command>python win</command>
+    <arguments>=C:\Python25</arguments>
+  </application>
+
+  <application path='C:\Softimage\XSI_6.02\Doc\en\XSISDK\xsisdk.chm'>
+    <command>Softimage SDK</command>
+  </application>
+
+  <application path='C:\Softimage\XSI_6.02\Doc\en\XSI\xsidocs.chm'>
+    <command>Softimage Documentation</command>
+  </application>
+
+  <application path='C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\VWDExpress.exe'>
+    <command>visual web developer</command>
+  </application>
+
+  <application path='c:windows\explorer.exe'>
+    <command>Softimage Plugins</command>
+    <arguments>/root,E:\Softimage\SilentOrb_Workgroup\Application\Plugins</arguments>
+  </application>
+
+  <application path='c:windows\explorer.exe'>
+    <command>windows explorer</command>
+  </application>
+
+  <application path='C:\Program Files\Microsoft Visual Studio 8\Common7\Tools\spyxx.exe'>
+    <command>spy</command>
+  </application>
+
+  <application path='C:\Program Files\Ultrapico\Expresso\expresso.exe'>
+    <command>expresso</command>
+  </application>
+
+  <application path='C:\Program Files\MySQL\MySQL Tools for 5.0\MySQLAdministrator.exe'>
+    <command>my SQL Administrator</command>
+  </application>
+
+  <application path='E:\Program Files\RSS_Downloader\RSS_Downloader.exe'>
+    <command>RSS Downloader</command>
+  </application>
+
+  <application path='C:\Program Files\Adobe\Photoshop CS\Photoshop.exe'>
+    <command>photoshop</command>
+  </application>
+
+  <application path='C:\Program Files\FreeRIP3\freerip3.exe'>
+    <command>free rip</command>
+  </application>
+
+  <application path='C:\Program Files\Nuance\NaturallySpeaking9\Program\natspeak.exe'>
+    <command>Dragon NaturallySpeaking</command>
+  </application>
+
+  <application path='C:\Program Files\Windows Media Player\wmplayer.exe'>
+    <command>windows media player</command>
+  </application>
+
+  <application path='C:\Program Files\iTunes\iTunes.exe'>
+    <command>I Tunes</command>
+  </application>
+
+  <application path='appwiz.cpl'>
+    <command>programs</command>
+  </application>
+
+  <application path='E:\Tools\eclipse\eclipse.exe'>
+    <command>eclipse</command>
+  </application>
+
+  <application path='E:\Dev\websites\xampp\xampp-control.exe'>
+    <command>server</command>
+  </application>
+
+  <application path='C:\Program Files\NetBeans 7.1\bin\netbeans.exe'>
+    <command>netbeans</command>
+  </application>
+               
+</list>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar>
+  <rule id='root' scope='public'>
+
+    <choice >
+
+      <item>
+        <tag>sendkeys={F7}"</tag>build project
+      </item>
+      <item>
+        <tag>sendkeys="{F5}"</tag>debug project
+      </item>
+      <item>
+        <tag>sendkeys="^Q"</tag>comment out
+      </item>
+      <item>
+        <tag>sendkeys="^W"</tag>uncomment
+      </item>
+    </choice>
+  </rule>
+
+
+</grammar>

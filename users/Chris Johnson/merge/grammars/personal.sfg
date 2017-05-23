@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+ priority="2">
+
+  <rule id='root'>
+    <choice >
+      <item weight='3' display='not used'>not used 1</item>
+      <item weight='3' display='not used'>note used 2</item>
+      <item >
+        ruby test
+        <tag>ruby="<![CDATA[
+node = MetaNode.new [String,"test"]
+node.render
+puts "result = " + node.test
+]]>"
+        </tag>
+      </item>
+      
+      <item >
+        use lame
+        <tag>node="lame"</tag>
+      </item>
+
+      <item >
+        list node types
+        <tag>ruby="<![CDATA[
+puts MetaNode.types
+]]>"
+        </tag>
+      </item>
+
+      <item >
+        MetaNode test
+        <tag>
+          ruby="<![CDATA[
+node = Lame.new
+#node.wave = '
+#node.mp3 = 
+node.render
+puts "result = " + node.test
+]]>"
+        </tag>
+      </item>
+      <item>        
+        whatever
+      </item>
+    </choice>
+  </rule>
+
+</grammar>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar xml:lang="en-us" version="1.0" mode="voice"
+xmlns="http://www.w3.org/2001/06/grammar" tag-format="properties-ms/1.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar 
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+
+xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions"
+root="root"
+         >
+  <rule id='root' scope='public'>
+    <choice >    
+        <reference uri='spelling.sfg'/>    
+      <word >1</word>
+      <word >2</word>
+      <word >3</word>
+      <word >4</word>
+      <word >5</word>
+      <word >6</word>
+      <word >7</word>
+      <word >8</word>
+      <word >9</word>
+      <word display="0">zero</word>
+      <word display="^">control</word>
+      <word display="+">shift</word>
+      <word display="%">alt</word>
+      <word display="{(}">right paren</word>
+      <word display="&lt;">lesser than</word>
+      <word display="&gt;">greater than</word>
+      <word display=",">comma</word>
+      <word display=".">period</word>
+      <word display="?">question mark</word>
+      <word display="!">exclamation point</word>
+      <word display="*">asterisk</word>
+      <word display="&apos;">apostrophe</word>
+      <word display="&quot;">quote</word>
+      <word display="-">minus</word>
+      <word display="{+}">plus</word>
+      <word display="{{}">left brace</word>
+      <word display="{}}">right brace</word>
+      <word display="{`}">tilde</word>
+      <word display="{F1}">f1</word>
+      <word display="{F2}">f2</word>
+      <word display="{F3}">f3</word>
+      <word display="{F4}">f4</word>
+      <word display="{F5}">f5</word>
+      <word display="{F6}">f6</word>
+      <word display="{F7}">f7</word>
+      <word display="{F8}">f8</word>
+      <word display="{F9}">f9</word>
+      <word display="{F10}">f10</word>
+      <word display="{F12}">f12</word>
+      <word display="{HOME}">home</word>
+      <word display="{SPACEBAR}">spacebar</word>
+      <word display="{END}">end</word>
+      <word display="{INSERT}">insert</word>
+      <word display="{DELETE}">delete</word>
+      <word display="{PGUP}">page up</word>
+      <word display="{PGDN}">page down</word>
+      <word display="{UP}">up</word>
+      <word display="{DOWN}">down</word>
+      <word display="{LEFT}">left</word>
+      <word display="{RIGHT}">right</word>
+      <word display="{ENTER}">enter</word>
+      <word display="{ESC}">escape</word>
+      <word display="{BACKSPACE}">backspace</word>
+      <word display="{TAB}">tab</word>
+    </choice>
+  </rule>
+</grammar>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+>
+  
+  <rule id='root'>    
+    <choice >
+      <item>
+        <tag>sendkeys="x"</tag>flip
+      </item>
+      <item>
+        <tag>sendkeys="b"</tag>brush
+      </item>
+      <item>
+        <tag>sendkeys="^t"</tag>transform
+      </item>
+      <item>
+        <tag>sendkeys="%ld"</tag>duplicate layer
+      </item>
+      <item>
+        <tag>sendkeys="%lll{ENTER}"</tag>delete layer
+      </item>
+      <item>
+        <tag>sendkeys="%fr"</tag>open recent
+      </item>
+      <item>
+        <tag>sendkeys="v"</tag>move
+      </item>
+      <item>
+        <tag>sendkeys="^-"</tag>zoom out
+      </item>
+      <item>
+        <tag>sendkeys="^="</tag>zoom in
+      </item>
+      <item>
+        <tag>sendkeys="m"</tag>marquis
+      </item>
+      <item>
+        <tag>sendkeys="z"</tag>zoom
+      </item>
+      <item>
+        <tag>sendkeys="{F7}"</tag>layers
+      </item>
+      <item>
+        <tag>sendkeys="^d"</tag>deselect
+      </item>
+
+    </choice>
+</rule>
+
+</grammar>

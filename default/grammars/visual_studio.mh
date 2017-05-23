@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<node name="Meta_Document" version="1.3">
+  <node name="test" type="Grammar_Item">
+    <property name="words">
+      <value>test</value>
+    </property>
+    <property name="display" />
+    <property name="weight">
+      <value>0</value>
+    </property>
+    <property name="action" />
+  </node>
+  <node name="Grammar_Item1" type="Grammar_Item">
+    <property name="words">
+      <value>hello</value>
+    </property>
+    <property name="display" />
+    <property name="weight">
+      <value>0</value>
+    </property>
+    <property name="action" />
+  </node>
+</node>

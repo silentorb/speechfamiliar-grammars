@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<list>
+  <application name ="global">
+    <grammar>dictation</grammar>
+    <grammar>global</grammar>
+  </application>
+
+  <application name ="Visual Studio" class="vs_context">
+    <process>devenv</process>
+    <process>VWDExpress</process>
+    <process>powershell_ise</process>
+    <grammar>visual_studio</grammar>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+  </application>
+
+  <application name ="Web Browser">
+    <process>iexplore</process>
+    <process>firefox</process>
+    <process>chrome</process>
+    <grammar>web_browser</grammar>
+    <grammar>global</grammar>
+    <grammar>dictation</grammar>
+  </application>
+
+  <application name="Windows Explorer">
+    <process>explorer</process>
+    <grammar>windows_explorer</grammar>
+    <grammar>global</grammar>
+    <grammar>dictation</grammar>
+  </application>
+
+  <application name ="Sonar">
+    <title>SONAR.*Producer</title>
+    <grammar>sonar</grammar>
+    <grammar>global</grammar>
+  </application>
+
+  <application name ="PowerShell">
+    <process>powershell</process>
+    <grammar>global</grammar>
+    <grammar>powershell_commands</grammar>
+    <grammar>powershell_dictation</grammar>
+  </application>
+
+  <application name="New Word">
+    <title>Add New Word</title>
+    <grammar>global</grammar>
+    <grammar>add_word</grammar>
+  </application>
+
+  <application name="Mozilla Thunderbird">
+    <title>Thunderbird</title>
+    <grammar>global</grammar>
+    <grammar>Thunderbird</grammar>
+  </application>
+
+  <application name="Photoshop">
+    <process>photoshop</process>
+    <grammar>global</grammar>
+    <grammar>photoshop</grammar>
+  </application>
+
+  <application name="Microsoft Word">
+    <process>winword</process>
+    <grammar>global</grammar>
+    <grammar>word</grammar>
+    <grammar>dictation</grammar>
+  </application>
+
+  <application name="Text Editor" class="text_editor_context">
+    <title>Text_Editor</title>
+    <grammar>global</grammar>
+    <grammar>dictation</grammar>
+  </application>
+
+  <application name="Bash">
+    <process>mintty</process>
+    <grammar>global</grammar>
+    <grammar>bash</grammar>
+  </application>
+</list>

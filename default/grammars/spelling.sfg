@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar >
+  <rule id='root' no_spaces ='true'>
+    <choice >
+      <reference uri='letters.sfg'/>
+      <reference uri='punctuation.sfg'/>
+      <reference uri='numbers.sfg#normal'/>
+    </choice>
+  </rule>
+  
+  <rule id='spell_command' >
+    spell
+    <item parameter="character" repeat='1-20'>
+      <reference uri='#root'/>
+    </item>
+    <tag>
+      python="<![CDATA[
+output = ''
+for x in word.parameters['character']:
+  Automation.sendkeys(x.text)
+  output += x.text
+print 'spelled ' + output
+]]>"
+    </tag>
+  </rule>
+
+  <rule id='spell' >
+    <item parameter="character" repeat='1-20'>
+      <reference uri='#root'/>
+    </item>
+    <tag>
+      python="<![CDATA[
+output = ''
+for x in word.parameters['character']:
+  Automation.sendkeys(x.text)
+  output += x.text
+print 'spelled ' + output
+]]>"
+    </tag>
+  </rule>
+</grammar>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar >
+
+  <rule id='root'>
+    
+    <choice >
+      <item>
+        <tag>sendkeys="n"</tag>next message
+      </item>
+      <item>
+        <tag>sendkeys="^r"</tag>reply
+      </item>
+      <item>
+        <tag>sendkeys="^l"</tag>forward
+      </item>
+      <item>
+        <tag>sendkeys="^2"</tag>address book
+      </item>
+      <item>
+        <tag>sendkeys="y"</tag>yes
+      </item>
+
+    </choice>
+  </rule>
+
+</grammar>

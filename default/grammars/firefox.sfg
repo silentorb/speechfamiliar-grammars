@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+>
+  
+  <rule id='root'>    
+    <choice >
+      <item >
+        add page
+        <tag>sendkeys="%d"</tag>
+        <tag>plugin="web_browser.add_page"</tag>
+      </item>
+      <item display='%b'>
+        bookmarks
+      </item>
+      <item display='^d'>add bookmark</item>
+    </choice>
+</rule>
+
+</grammar>

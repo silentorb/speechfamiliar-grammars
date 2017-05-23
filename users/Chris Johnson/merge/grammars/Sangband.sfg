@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <rule id='root'>
+    <item repeat='1-5'>
+      <tag>
+        ruby="<![CDATA[
+
+output = ''
+sentence.words.each do |word|
+  output += word.text
+end
+
+Automation.sendkeys output
+print 'spelled ' + output
+]]>"
+      </tag>
+      <choice >
+        <word display='a'>aim wand</word>
+        <word display='b'>browse</word>
+        <reference uri='spelling.sfg'/>
+
+        <word display='c'>close door</word>
+        <word display='d'>drop</word>
+        <word display='{ESCAPE}'>cancel</word>
+        <word display='{ESC}'>escape</word>
+        <word display='{ESC}'>exit</word>
+        <word display='r'>read scroll</word>
+        <word display='C'>character screen</word>
+        <word display='e'>equipment</word>
+        <word display='m'>cast</word>
+        <word display='i'>inventory</word>
+        <word display='{ENTER}'>enter</word>
+        <word display='p'>purchase</word>
+        <word display='q*'>quaff</word>
+        <word display='o'>open door</word>
+        <word display='w'>wield</word>
+        <word display='>'>descend</word>
+        <word display='a'>ascend</word>
+        <word display='*'>all</word>
+        <word display='*'>list</word>
+        <word display='*t'>nearest</word>
+        <word display='M'>map</word>
+        <word display='n'>repeat</word>
+        <word display='z'>zap rod</word>
+        <word display='Z'>use staff</word>
+        <word display='R*{ENTER}'>rest</word>
+        <word display='l'>look</word>
+        <word display='y{ENTER}'>yes</word>
+        <word display='n{ENTER}'>no</word>
+        <word display='k'>destroy</word>
+        <word display='z5'>zap sense surroundings</word>
+        <word display='d'>disarm</word>
+        <word display='g'>grab</word>
+        <word display='f0'>fire</word>
+        <word display='r*'>read</word>
+        <word display='k-ay{ENTER}'>destroy ground</word>
+        <!--<reference uri='#sorcerer'/>-->
+        <!--<reference uri='#fighter'/>-->
+        <!--<reference uri='#priest'/>-->
+        <!--<reference uri='#assassin'/>-->
+      </choice>
+    </item>
+  </rule>
+
+  <rule id='assassin'>
+    <choice >
+      <word display='m1a'>detect evil</word>
+      <word display='m1b'>detect traps</word>
+      <word display='m1c'>detect doors</word>
+      <word display='m1d'>infravision</word>
+      <word display='m1bm1c'>find all</word>
+    </choice>
+  </rule>
+
+  <rule id='fighter'>
+    <choice >
+      <word display='z1z2z5'>zap detect</word>
+      <word display='z9'>zap word of recall</word>
+      <word display='z4*'>zap identify</word>
+      <word display='E1{ENTER}'>eat food</word>
+    </choice>
+  </rule>
+
+  <rule id='priest'>
+    <choice >
+      <word display='m1a'>detect evil</word>
+      <word display='m1e'>light area</word>
+      <word display='m1f'>find traps</word>
+      <word display='m1g'>detect doors</word>
+      <word display='m2c'>portal</word>
+      <word display='m2h'>resist heat and cold</word>
+      <word display='m2f'>satisfy hunger</word>
+      <word display='m3g'>sense surroundings</word>
+      <word display='m3b'>orb of draining</word>
+      <word display='m3i'>prayer</word>
+      <word display='m3d'>protection from evil</word>
+      <word display='m4b'>heal</word>
+    </choice>
+  </rule>
+
+  <rule id='sorcerer'>
+    <choice >
+      <word display='maa'>magic missile</word>
+      <word display='mab'>detect monsters</word>
+      <word display='mac'>phase door</word>
+      <word display='mad'>light area</word>
+      <word display='mag'>detect traps</word>
+
+      <word display='mbf'>teleport self</word>
+
+      <word display='mca'>satisfy hunger</word>
+      <word display='mcd*'>identify</word>
+      <word display='mch*'>tap magical energy</word>
+      <word display='m3g'>slow monster</word>
+      <word display='mda'>frost ball</word>
+      <word display='mdb*'>recharge item</word>
+      <word display='mdd'>haste self</word>
+      <word display='mde'>fire ball</word>
+
+      <word display='mee{ENTER}{ENTER}'>resistance</word>
+
+      <word display='mfa'>door creation</word>
+      <word display='mfb'>stair creation</word>
+      <word display='mfc'>teleport level</word>
+      <word display='mfd'>word of recall</word>
+
+      <word display='mgb'>detect enchantment</word>
+
+      <word display='z2'>zap acid bolt</word>
+      <word display='z1'>zap lightning bolt</word>
+      <word display='z3'>zap frost bolt</word>
+      <word display='z6'>zap fire bolt</word>
+      <word display=''></word>
+
+    </choice>
+  </rule>
+</grammar>

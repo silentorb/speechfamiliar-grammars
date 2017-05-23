@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar>
+  <rule id='root' scope='public'>
+
+    <choice >
+      <item>
+        <tag>sendkeys="%7"</tag>toggle comment
+      </item>
+      <item>
+        <tag>sendkeys="%+F"</tag>format text
+      </item>
+      <item>
+        <tag>sendkeys="^+QE"</tag>explore solution
+      </item>
+    </choice>
+  </rule>
+
+
+</grammar>

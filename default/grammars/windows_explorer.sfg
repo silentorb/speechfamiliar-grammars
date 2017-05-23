@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         
+>
+  <onload type="python">
+    <![CDATA[
+Automation.execute('web_browser.initialize_folders', Array[object](['windows_explorer', 'folders.xml']))
+]]>
+  </onload>
+
+  <rule id='root'>    
+    <choice >
+      <reference uri='#explorer'/>
+      <item >
+        go to <reference uri='#pages'/>
+        <tag>plugin="web_browser.goto_folder"</tag>
+      </item>
+      <item >
+        add folder
+        <tag>plugin="web_browser.add_folder"</tag>
+      </item>
+    </choice>
+</rule>
+
+  <rule id='explorer'>
+    <choice>
+      <item>
+        <tag>sendkeys="%d^c{ESC}"</tag>copy address
+      </item>
+      <item>
+        <tag>sendkeys="%d^v{ESC}"</tag>paste address
+      </item>
+      <item>
+        <tag>sendkeys="%d"</tag>select address
+      </item>
+    </choice>
+  </rule>
+
+  <rule id='pages'>
+    <choice parameter='address'>
+      <item >default</item>
+    </choice>
+  </rule>
+  
+</grammar>

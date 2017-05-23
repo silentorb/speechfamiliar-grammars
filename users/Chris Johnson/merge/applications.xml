@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<list>
+  <application name="notepad++">
+    <process>notepad++</process>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+  </application>
+
+  <application name="PhpStorm">
+    <title>PhpStorm</title>
+    <grammar>jetbrains</grammar>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+  </application>
+  
+  <application name="CLion">
+    <title>CLion</title>
+    <grammar>jetbrains</grammar>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+  </application>
+  
+  <application name="FlashDevelop">
+    <title>FlashDevelop</title>
+    <grammar>programming</grammar>
+    <grammar>flashdev</grammar>
+    <grammar>global</grammar>
+  </application>
+
+  <application name="NetBeans">
+    <title>NetBeans\sIDE</title>
+    <grammar>netbeans</grammar>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+  </application>
+  
+  <application name="Eclipse">
+    <process>eclipse</process>
+    <grammar>eclipse</grammar>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+  </application>
+  
+  <application name="TexnicCenter">
+    <process>TEXCNTR</process>
+    <grammar>programming</grammar>
+    <grammar>global</grammar>
+    <grammar>tex</grammar>
+  </application>
+
+  <application name="Filezilla">
+    <process>filezilla</process>
+    <grammar>global</grammar>
+    <grammar>filezilla</grammar>
+    <grammar>dictation</grammar>
+  </application>
+
+  <application name="Sangband">
+    <process>sangband</process>
+    <grammar>global</grammar>
+    <grammar>sangband</grammar>
+  </application>
+  
+  <application name="OAngband">
+    <process>oangband</process>
+    <grammar>global</grammar>
+    <grammar>oangband</grammar>
+  </application>
+  
+  <application name="NetHack">
+    <process>NetHackW</process>
+    <grammar>global</grammar>
+    <grammar>nethack</grammar>
+  </application>
+    
+</list>

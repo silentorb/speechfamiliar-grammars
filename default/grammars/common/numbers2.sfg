@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar>
+  <rule id='root'>
+    <choice >
+
+      <item>0</item>
+
+      <item>
+        <item repeat="0-1">
+          <reference uri="#triple_digits"/>
+        </item>
+        <item repeat="0-1">and</item>
+        <item repeat="0-1">
+          <choice>
+            <item >
+              <reference uri="#double_digits"/>
+            </item>
+            <item >
+              <reference uri="#tens"/>
+            </item>
+          </choice>
+        </item>
+        <item repeat="0-1">
+          <reference uri="#digits"/>
+        </item>
+      </item>
+    </choice>
+
+  </rule>
+
+  <rule id="numeral">
+    numeral
+    <item repeat="1-16">
+      <reference uri="#root"/>
+    </item>
+  </rule>
+
+  <rule id='normal'>
+    <choice >
+
+      <item>0</item>
+
+      <item>
+        <item repeat="0-1">
+          <reference uri="#triple_digits"/>
+        </item>
+        <item repeat="0-1">
+          and
+        </item>
+        <item repeat="0-1">
+          <choice>
+            <item >
+              <reference uri="#double_digits"/>
+            </item>
+            <item >
+              <reference uri="#tens"/>
+            </item>
+          </choice>
+        </item>
+        <item repeat="0-1">
+          <reference uri="#digits"/>
+        </item>
+      </item>
+    </choice>
+
+  </rule>
+
+  <rule id="digits">
+    <choice>
+      <item >1</item>
+      <item >2</item>
+      <item >3</item>
+      <item >4</item>
+      <item >5</item>
+      <item >6</item>
+      <item >7</item>
+      <item >8</item>
+      <item >9</item>
+    </choice>
+  </rule>
+
+  <rule id="double_digits">
+    <choice>
+      <item >20</item>
+      <item >30</item>
+      <item >40</item>
+      <item >50</item>
+      <item >60</item>
+      <item >70</item>
+      <item >80</item>
+      <item >90</item>
+    </choice>
+  </rule>
+
+  <rule id="triple_digits">
+    <choice>
+      <item >100</item>
+      <item >200</item>
+      <item >300</item>
+      <item >400</item>
+      <item >500</item>
+      <item >600</item>
+      <item >700</item>
+      <item >800</item>
+      <item >900</item>
+    </choice>
+  </rule>
+
+  <rule id="tens">
+    <choice>
+      <item>10</item>
+      <item>11</item>
+      <item>12</item>
+      <item>13</item>
+      <item>14</item>
+      <item>15</item>
+      <item>16</item>
+      <item>17</item>
+      <item>18</item>
+      <item>19</item>
+    </choice>
+  </rule>
+</grammar>

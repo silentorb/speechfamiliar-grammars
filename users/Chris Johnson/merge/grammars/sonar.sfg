@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar>
+  <rule id='root' scope='public'>
+    
+    <choice >
+
+      <item>
+        <tag>sendkeys="%ff"</tag>project info
+      </item>
+      <item>
+        <tag>sendkeys="%ou"</tag>audio options
+      </item>
+      <item>
+        <tag>sendkeys="%rl"</tag>delete track
+      </item>
+
+      <item>
+        <tag>sendkeys="r"</tag>record
+      </item>
+
+      <item>
+        <tag>sendkeys="%iyd"</tag>insert dimension
+      </item>
+      <item>
+        <tag>sendkeys="%fia"</tag>import audio
+      </item>
+      <item>
+        <tag>sendkeys="%fea%p+c{DOWN}%n"</tag>export audio
+      </item>
+      <item>
+        <tag>sendkeys="%+z"</tag>redo
+      </item>
+      <item>
+        <tag>sendkeys="{ESC}"</tag>cancel
+      </item>
+      <item>
+        <tag>sendkeys="{SPACEBAR}"</tag>play
+      </item>
+      <item>
+        <tag>sendkeys="^{HOME}"</tag>rewind
+      </item>
+      <item>
+        <tag>sendkeys="{SPACEBAR}"</tag>stop
+      </item>
+      <item>
+        <tag>sendkeys="^{PGUP}"</tag>previous measure
+      </item>
+      <item>
+        <tag>sendkeys="^{PGDN}"</tag>next measure
+      </item>
+
+      <item>
+        <tag>sendkeys="%ra"</tag>archive
+      </item>
+      <item>
+        <tag>sendkeys="%8"</tag>synth rack
+      </item>
+      <item>
+        <tag>sendkeys="%3"</tag>console
+      </item>
+      <item>
+        <tag>sendkeys="%0"</tag>track view
+      </item>
+      <item>
+        <tag>sendkeys="%pv"</tag>scale velocity
+      </item>
+      <item>
+        <tag>sendkeys="%pn"</tag>transpose
+      </item>
+      <item>
+        <tag>sendkeys="%rc{ENTER}"</tag>clone track
+      </item>
+      <item>
+        <tag>sendkeys="%f1"</tag>open last project
+      </item>
+      <item>
+        <tag>sendkeys="%ia"</tag>insert audio track
+      </item>
+      <item>
+        <tag>sendkeys="+b"</tag>toggle bus
+      </item>
+      <item>
+        <tag>sendkeys="+f"</tag>center view
+      </item>
+      <item>
+        <tag>sendkeys="%vs"</tag>view markers
+      </item>
+      <item>
+        <tag>sendkeys="{F11}"</tag>insert marker
+      </item>
+      <item>
+        <tag>sendkeys="n"</tag>snap
+      </item>
+      <item>
+        <tag>sendkeys="%rpu"</tag>change output
+      </item>
+      <item>
+        <tag>sendkeys="%0^a%vs{END}{UP}+{HOME}^{F4}%fea%p"</tag>export project
+      </item>
+      <item>
+        <tag>sendkeys="i"</tag>inspecter
+      </item>
+      <item>
+        <tag>sendkeys="x"</tag>crossfade
+      </item>
+      <item>
+        <tag>sendkeys="%ed{ENTER}"</tag>delete hole
+      </item>
+      <item>
+        <tag>sendkeys="%gs+{TAB 8}{SPACE}%u{ENTER}"</tag>next clip
+      </item>
+      <item>
+        <tag>sendkeys="^+a"</tag>deselect
+      </item>
+      <item>
+        <tag>sendkeys="/"</tag>solo
+      </item>
+      <item>
+        <tag>sendkeys="%ru"</tag>mute
+      </item>
+      <item>
+        <tag>sendkeys="%ra"</tag>archive
+      </item>
+      <item>
+        <tag>sendkeys="%rr"</tag>arm
+      </item>
+      <item>
+        <tag>sendkeys="%if"</tag>insert track folder
+      </item>
+      <item>
+        <tag>sendkeys="%5"</tag>piano roll
+      </item>
+      <item>
+        <tag>sendkeys="d"</tag>draw
+      </item>
+      <item>
+        <tag>sendkeys="e"</tag>eraser
+      </item>
+      <item>
+        <tag>sendkeys="s"</tag>select
+      </item>
+      <item>
+        <tag>sendkeys="%pl%b"</tag>scale length
+      </item>
+      <item>
+        <tag>sendkeys="l"</tag>video
+      </item>
+      <item>
+        <tag>sendkeys="^b"</tag>effects bin
+      </item>
+      <item>
+        <tag>sendkeys="^f"</tag>toggle folder
+      </item>
+      <item>
+        <tag>sendkeys="+u"</tag>undo view
+      </item>
+      <item>
+        <tag>sendkeys="+v"</tag>create V-vocal
+      </item>
+      <item>
+        <tag>sendkeys="^+v"</tag>edit V-vocal
+      </item>
+
+      <item>
+        <choice parameter="action">
+          <item>expand</item>
+          <item>contract</item>
+        </choice>
+
+        <choice parameter="direction">
+          <item>X</item>
+          <item>Y</item>
+        </choice>
+        <reference parameter="amount"  uri="numbers.sfg#digits"/>
+        <tag>python="<![CDATA[
+direction = ''
+if word.parameter['direction'] == 'X':
+  if word.parameter['action'] == 'expand':
+    direction = 'RIGHT'
+  else:
+    direction = 'LEFT'
+else:
+  if word.parameter['action'] == 'expand':
+    direction = 'DOWN'
+  else:
+    direction = 'UP'
+ 
+Automation.sendkeys('^{' + direction + ' ' + word.parameter['amount'] + '}')
+ 
+]]>"</tag>
+      </item>
+
+      <item>
+        <tag>sendkeys="d"</tag>toggle navigator
+      </item>
+
+    </choice>
+</rule>
+
+ 
+</grammar>

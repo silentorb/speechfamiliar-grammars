@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<grammar >
+  <rule id='root' no_spaces ='true'>
+    <choice >
+      <word>a</word>
+      <word display='a'>ant</word>
+      <word>b</word>
+      <word >c</word>
+      <word >d</word>
+      <word >e</word>
+      <word  weight='1.91'>f</word>
+      <word >g</word>
+      <word >h</word>
+      <word>i</word>
+      <word display="i">iris</word>
+      <word >j</word>
+      <word >k</word>
+      <word >l</word>
+      <word >m</word>
+      <word display="m">monkey</word>
+      <word >n</word>
+      <word >o</word>
+      <word >p</word>
+      <word >q</word>
+      <word >r</word>
+      <word >s</word>
+      <word >t</word>
+      <word >u</word>
+      <word >v</word>
+      <word >w</word>
+      <word >x</word>
+      <word display="y">why</word>
+      <word >z</word>
+    </choice>
+  </rule>
+
+</grammar>

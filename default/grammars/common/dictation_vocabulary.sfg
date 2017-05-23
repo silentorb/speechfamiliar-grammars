@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<grammar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"         
+>  
+  <rule id='root'>    
+    <choice >
+      <word grammar='noun'>you</word>
+      <word>cable</word>
+      <word>Chris</word>
+      <word>dragon</word>
+      <word>God</word>
+      <word>google</word>
+      <word>Johnson</word>
+      <word>rectangle</word>
+      <word>that</word>
+    </choice>
+</rule>
+
+</grammar>
